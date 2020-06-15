@@ -4,7 +4,7 @@ but these changes are not merged to workgin directory.
 git fetch shows the list of changes in remote repository.
 
 we need to add new command "git merge" to merge the changes.
-
+#added this line to demonstrate about the git fetch command
 
 git pull:
 
