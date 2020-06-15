@@ -5,6 +5,7 @@ git fetch shows the list of changes in remote repository.
 
 we need to add new command "git merge" to merge the changes.
 #added this line to demonstrate about the git fetch command
+#this line form the remote repository
 
 git pull:
 
