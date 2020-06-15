@@ -1,6 +1,6 @@
 var fs = require('fs');
  
-fs.readFile('git-fetch_and_git-pull', 'utf8', function(err, contents) {
+fs.readFile('data.txt', 'utf8', function(err, contents) {
     console.log(contents);
 });
  
