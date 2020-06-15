@@ -1,0 +1,64 @@
+{
+    "persons": [{
+            "name": "John",
+            "city": "Kochi",
+            "phone": {
+                "office": "040-528-1258",
+                "home": "9952685471"
+            }
+ 
+        },
+        {
+            "name": "Phil",
+            "city": "Varkazha",
+            "phone": {
+                "office": "040-528-8569",
+                "home": "7955555472"
+            }
+        }
+    ]
+},
+// POST /imposters HTTP/1.1
+// Host: localhost:43120
+// Accept: application/json
+// Content-Type: application/json
+
+{
+  "port": 4545,
+  "protocol": "http",
+  "stubs": [
+    {
+      "responses": [{
+        "is": {
+          "body": {
+            "code": "SUCCESS",
+            "author": "J.K. Rowling"
+          }
+        }
+      }],
+      "predicates": [
+        {
+          "equals": { "body": { "title": "Harry Potter" } },
+          "caseSensitive": true,
+          "comment": "case sensitivity applies to the key as well as the value"
+        },
+        {
+          "equals": { "body": { "title": "POTTER" } },
+          "except": "HARRY ",
+          "comment": "The except regular expression is removed from the value before matching"
+        },
+        {
+          "matches": { "body": { "title": "^Harry" } }
+        },
+        {
+          "exists": { "body": { "title": true } },
+          "comment": "The given JSON key must exist"
+        },
+        {
+          "exists": { "body": { "name": false } },
+          "comment": "The given JSON key must NOT exist"
+        }
+      ]
+    }
+  ]
+}
