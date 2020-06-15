@@ -1,0 +1,12 @@
+git fetch :
+this command is used to get the chagnes form remote repository to local repository.
+but these changes are not merged to workgin directory.
+git fetch shows the list of changes in remote repository.
+
+we need to add new command "git merge" to merge the changes.
+
+
+git pull:
+
+this comamnd is used to fetch the changes from remote repository and merge.
+git pull = git remote+ git merge
