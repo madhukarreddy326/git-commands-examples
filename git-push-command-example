@@ -1,0 +1,15 @@
+git push <remote repository>
+git push --all
+git push --tags
+git push origin --delete <<branchname>>
+    this command is used to delete remote branch
+git push <<remote>> <<branch>>
+git push <<remote>> --force
+git push <<remote>> --all
+git push <<remote>> --tagsgit push --force origin master
+git push origin --delete <<brnahc name>>
+git checkout -b develop
+    this command is used to create new branch
+git push origin develop
+git pull origin develop
+git push origin -delte develop
