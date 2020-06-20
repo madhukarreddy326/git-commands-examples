@@ -1,0 +1,224 @@
+{  
+    "predicates":[  
+       {
+           "and":[  
+             {  
+                "equals":{  
+                   "method":"POST"
+                }
+             },
+             {  
+                "matches":{  
+                   "path":"/validate-account-holder",
+                   "body": {
+                        "account": {
+                          "value": "IT87M00000223000EM000002145"
+                        },
+                        "accountHolder": {
+                          "type": "PERSON_NATURAL",
+                          "fiscalCode": "MCKBNKAA0BB0111C"
+                        }
+                      }
+                }
+             }
+          ]
+         }
+    ],
+    "responses":[  
+       {  
+          "is":{  
+             "headers":{  
+                "Content-Type":"application/json"
+             },
+             "statusCode":200,
+             "body":{
+                    "status": "OK",
+                    "errors": null,
+                    "payload": {
+                      "validationStatus": "OK",
+                      "account": {
+                        "value": "IT87M00000223000EM000002145",
+                        "valueType": "IBAN",
+                        "bicCode": null,
+                        "type": "ACCOUNT",
+                        "age": "MORE_THAN_3_MONTHS",
+                        "hasMultipleHolders": false,
+                        "hasRepresentatives": false
+                      },
+                      "accountHolder": {
+                        "type": "PERSON_NATURAL",
+                        "fiscalCode": "MCKBNKAA0BB0111C",
+                        "vatCode": null,
+                        "taxCode": null,
+                        "role": "HOLDER"
+                      }
+                    }
+                  }
+          }
+       }
+    ]
+ },{  
+    "predicates":[  
+       {
+       "and":[  
+             {  
+                "equals":{  
+                   "method":"POST"
+                }
+             },
+             {  
+                "matches":{  
+                   "path":"/validate-account-holder",
+                   "body": {
+                        "account": {
+                          "value": "IT87M00000235000EM000012345"
+                        },
+                        "accountHolder": {
+                          "type": "PERSON_NATURAL",
+                          "fiscalCode": "MCKBNKAA0BB0111C"
+                        }
+                      }
+ 
+                }
+             }
+          ]
+           
+         }
+    ],
+    "responses":[  
+       {  
+          "is":{  
+             "headers":{  
+                "Content-Type":"application/json"
+             },
+             "statusCode":200,
+             "body":{
+                "status": "OK",
+                "errors": null,
+                "payload": {
+                  "validationStatus": "KO",
+                  "account": {
+                    "value": "IT87M00000235000EM000012345",
+                    "valueType": "IBAN",
+                    "bicCode": null,
+                    "type": "ACCOUNT",
+                    "age": "MORE_THAN_3_MONTHS",
+                    "hasMultipleHolders": false,
+                    "hasRepresentatives": false
+                  },
+                  "accountHolder": {
+                    "type": "PERSON_NATURAL",
+                    "fiscalCode": "MCKBNKAA0BB0111C",
+                    "vatCode": null,
+                    "taxCode": null,
+                    "role": "HOLDER"
+                  }
+                }
+              }
+ 
+          }
+       }
+    ]
+ },{  
+    "predicates":[  
+       {
+       "and":[  
+             {  
+                "equals":{  
+                   "method":"POST"
+                }
+             },
+             {  
+                "matches":{  
+                   "path":"/validate-account-holder",
+                   "body": {
+                        "account": {
+                          "value": "IT87M00000235000EM000012345"
+                        },
+                        "accountHolder": {
+                          "type": "PERSON_NATURAL",
+                          "fiscalCode": "MCKBNKDD0CC0111C"
+                        }
+                      }
+                }
+             }
+          ]
+           
+         }
+    ],
+    "responses":[  
+       {  
+          "is":{  
+             "headers":{  
+                "Content-Type":"application/json"
+             },
+             "statusCode":200,
+             "body":{
+                "status": "OK",
+                "errors": null,
+                "payload": {
+                  "validationStatus": "OK",
+                  "account": {
+                    "value": "IT87M00000235000EM000012345",
+                    "valueType": "IBAN",
+                    "bicCode": null,
+                    "type": "ACCOUNT",
+                    "age": "MORE_THAN_3_MONTHS",
+                    "hasMultipleHolders": false,
+                    "hasRepresentatives": false
+                  },
+                  "accountHolder": {
+                    "type": "PERSON_NATURAL",
+                    "fiscalCode": "MCKBNKDD0CC0111C",
+                    "vatCode": null,
+                    "taxCode": null,
+                    "role": "HOLDER"
+                  }
+                }
+              }
+          }
+       }
+    ]
+ },
+ {  
+    "predicates":[  
+       {
+       "and":[  
+             {  
+                "equals":{  
+                   "method":"POST"
+                }
+             },
+             {  
+                "matches":{  
+                   "path":"/validate-account-holder"				  
+                }
+             }
+          ]
+           
+         }
+    ],
+    "responses":[  
+       {  
+          "is":{  
+             "headers":{  
+                "Content-Type":"application/json"
+             },
+             "statusCode":400,
+             "body":{
+     "status": "KO",
+     "errors": [
+         {
+             "code": "PGPA-0008",
+             "description": "Invalid IBAN code",
+             "params": ""
+         }
+     ],
+     "payload": null
+ } 
+ 
+          }
+       }
+    ]
+ }
+ 
